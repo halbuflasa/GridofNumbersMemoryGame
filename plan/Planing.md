@@ -121,4 +121,5 @@ let gameMessage;        // Stores the result of the game (win/lose)
 ```
 
 ## Wire frame (UI drawings/plan)
-![excalidraw](./plan/Untitled-2024-10-01-0944.png/Untitled-2024-10-01-0944.png)
+![excalidraw](plan/Untitled-2024-10-01-0944.png)
+<img src="plan/Untitled-2024-10-01-0944.png">
