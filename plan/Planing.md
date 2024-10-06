@@ -119,7 +119,3 @@ let gameMessage;        // Stores the result of the game (win/lose)
 
 // Reset game state for a new round
 ```
-
-## Wire frame (UI drawings/plan)
-![excalidraw](plan/Untitled-2024-10-01-0944.png)
-<img src="plan/Untitled-2024-10-01-0944.png">
