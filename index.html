@@ -24,7 +24,7 @@
         <span class="number">4</span>
         <span class="number">0</span>
       </div>
-      
+
     <section id="game-container">
         <h1 id="Game-title">Numbers Grid Memory GAME</h1>
         
@@ -33,35 +33,45 @@
 
         <section id="game-settings" style="display: none;">
             <h1>Game Settings</h1>
-            <div id="levels">
-                <h2>Levels</h2>
-                <button class="level-btn" data-level="1x1">1x1</button>
-                <button class="level-btn" data-level="4x1">4x1</button>
-                <button class="level-btn" data-level="2x2">2x2</button>
-                <button class="level-btn" data-level="3x2">3x2</button>
-                <button class="level-btn" data-level="4x2">4x2</button>
-                <button class="level-btn" data-level="5x2">5x2</button>
-                <button class="level-btn" data-level="4x3">4x3</button>
-                <button class="level-btn" data-level="5x3">5x3</button>
-                <button class="level-btn" data-level="5x4">5x4</button>
+            <div class="settings-container">
+                <div class="settings-left">
+                    <h2>Levels</h2>
+                    <div id="levels" class="levels-container">
+                        <button class="level-btn" data-level="1x1">1x1</button>
+                        <button class="level-btn" data-level="4x1">4x1</button>
+                        <button class="level-btn" data-level="2x2">2x2</button>
+                        <button class="level-btn" data-level="3x2">3x2</button>
+                        <button class="level-btn" data-level="4x2">4x2</button>
+                        <button class="level-btn" data-level="5x2">5x2</button>
+                        <button class="level-btn" data-level="4x3">4x3</button>
+                        <button class="level-btn" data-level="5x3">5x3</button>
+                        <button class="level-btn" data-level="5x4">5x4</button>
+                    </div>
+                </div>
+                <div class="settings-right">
+                    <h2>Countdown</h2>
+                    <div id="countdown">
+                        <button class="countdown-btn" data-countdown="on">ON</button>
+                        <button class="countdown-btn" data-countdown="off">OFF</button>
+                    </div>
+                    <h2>Timer</h2>
+                    <div id="timer">
+                        <button class="timer-btn" data-timer="5">00:05</button>
+                        <button class="timer-btn" data-timer="10">00:10</button>
+                        <button class="timer-btn" data-timer="15">00:15</button>
+                        <button class="timer-btn" data-timer="20">00:20</button>
+                    </div>
+                </div>
             </div>
-            <div id="countdown">
-                <h2>Countdown</h2>
-                <button class="countdown-btn" data-countdown="on">ON</button>
-                <button class="countdown-btn" data-countdown="off">OFF</button>
-            </div>
-            <div id="timer" style="display: none;">
-                <h2>Timer</h2>
-                <button class="timer-btn" data-timer="5">00:05</button>
-                <button class="timer-btn" data-timer="10">00:10</button>
-                <button class="timer-btn" data-timer="15">00:15</button>
-                <button class="timer-btn" data-timer="20">00:20</button>
+            <!-- Save and Cancel buttons -->
+            <div id="settings-buttons">
+                <button id="save-settings" class="save-button">Save</button>
+                <button id="cancel-settings" class="cancel-button">Cancel</button>
             </div>
         </section>
-
+        
         <!-- Game Area -->
             <section id="game-area" style="display: none;">
-                <h1>Memory Game</h1>
                 <div id="timer-display">00:00</div>
                 <div id="grid-container">
                     <!-- Grid will be dynamically generated here -->

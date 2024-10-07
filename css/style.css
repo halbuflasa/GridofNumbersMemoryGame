@@ -1,5 +1,14 @@
+
 * {
     box-sizing: border-box;
+  }
+  
+  body {
+    color: white;
+    background-color: black;
+    font-family: system-ui, sans-serif;
+    min-height: 100dvh;
+    margin: 0;
   }
   
   #Game-title {
@@ -9,13 +18,6 @@
     color: white;
     font-size: 50px;
     text-align: center;
-  }
-  
-  body {
-    background-color: black;
-    font-family: system-ui, sans-serif;
-    min-height: 100dvh;
-    margin: 0;
   }
   
   button {
@@ -30,7 +32,6 @@
     flex-grow: 1; 
     margin: 10px; 
   }
-
   
   button:hover {
     background: rgba(241, 196, 15, 1.0);
@@ -48,12 +49,11 @@
     margin: 0 auto; 
   }
   
-.play-button{
-  font-size: 24px;
-}
-
-
-#numbers-background {
+  .play-button{
+    font-size: 24px;
+  }
+  
+  #numbers-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -75,7 +75,7 @@
                  0 0 40px rgba(241, 196, 15, 0.8),
                  0 0 60px rgba(241, 196, 15, 0.6);
   }
-
+  
   @keyframes glow {
     0% {
       opacity: 0;
@@ -102,5 +102,23 @@
   .number:nth-child(9) { top: 40%; left: 15%; }  /* Mid-left */
   .number:nth-child(10){ top: 45%; left: 85%; }  /* Mid-right */
   
+  #settings-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
   
-
+  .save-button, .cancel-button {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .save-button:hover, .cancel-button:hover {
+    background-color: #e67e22;
+    color: black;
+  }

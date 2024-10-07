@@ -12,28 +12,65 @@ const LEVEL_CONFIGS = {
 };
 
 /*---------- Variables (state) ---------*/
-let countdownOn = true;
-let selectedLevel = '1x1';
-let selectedTimer = 15;
-let originalNumbers = [];
-let userNumbers = [];
+let selectedLevel = ''; // Stores the selected game level (grid size)
+let selectedTimer = 15; // Default timer value
+let randomGrid = [];    // Stores the randomly generated grid of numbers
+let userGrid = [];      // Stores the user's selected grid
 
 
 /*----- Cached Element References  -----*/
-const startGameButton = document.getElementById('start-game');
-const gameArea = document.getElementById('game-area');
 
 
-/*-------------- Functions -------------*/
-function startGame() {
 
+/*-------------- Functions Section -------------*/
+
+function showGameSettings() {
+    const settingsSection = document.getElementById('game-settings');
+    const playButton = document.querySelector('.play-button');
+    const settingsButton = document.getElementById('game-settings-btn');
+    settingsSection.style.display = 'block';
+
+    // Hide Play and Settings buttons
+    playButton.style.display = 'none';
+    settingsButton.style.display = 'none';
 }
-function createNumberPalette(){
 
+function hideGameSettings() {
+    const settingsSection = document.getElementById('game-settings');
+    const playButton = document.querySelector('.play-button');
+    const settingsButton = document.getElementById('game-settings-btn');
+    // Hide settings section
+    settingsSection.style.display = 'none';
+    // Show Play and Settings buttons
+    playButton.style.display = 'block';
+    settingsButton.style.display = 'block';
+}
+
+function saveGameSettings() {
+    const saveMessage = document.getElementById('save-message');
+
+    // Optionally hide the settings section after saving
+    const settingsSection = document.getElementById('game-settings');
+    settingsSection.style.display = 'none';
+    
+    // Show Play and Settings buttons again
+    const playButton = document.querySelector('.play-button');
+    const settingsButton = document.getElementById('game-settings-btn');
+    playButton.style.display = 'block';
+    settingsButton.style.display = 'block';
 }
 
 
-/*----------- Event Listeners ----------*/
-startGameButton.addEventListener('click', startGame);
+
+/*---------------- Event Listeners ----------------*/
+
+// Event listener for the settings button
+document.getElementById('game-settings-btn').addEventListener('click', showGameSettings);
+// Event listener for the cancel button
+document.getElementById('cancel-settings').addEventListener('click', hideGameSettings);
+
+// Event listener for the save button
+document.getElementById('save-settings').addEventListener('click', saveGameSettings);
 
 
+document.getElementById('playButton').addEventListener('click', startGame);
