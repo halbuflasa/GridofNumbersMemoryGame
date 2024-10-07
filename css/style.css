@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  #Game-title {
+    font-family: "Bungee Outline", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+  }
+  
+  body {
+    background-color: black;
+    font-family: system-ui, sans-serif;
+    min-height: 100dvh;
+    margin: 0;
+  }
+  
+  button {
+    background: transparent;
+    cursor: pointer;
+    color: rgba(241, 196, 15, 1.0);
+    font-weight: bold;
+    padding: 15px 60px;
+    border-radius: 6px;
+    border: 3px solid rgba(241, 196, 15, 1.0);
+    transition: all 0.3s ease-out;
+    flex-grow: 1; 
+    margin: 10px; 
+  }
+
+  
+  button:hover {
+    background: rgba(241, 196, 15, 1.0);
+    color: black;
+  }
+  
+  #game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    justify-content: center;
+    text-align: center;
+    width: 100%; 
+    max-width: 400px;
+    margin: 0 auto; 
+  }
+  
+.play-button{
+  font-size: 24px;
+}
+
+
+#numbers-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; 
+    overflow: hidden;
+    background-color: black; 
+  }
+  
+  .number {
+    position: absolute;
+    font-size: 6vw; 
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.2);
+    opacity: 0; 
+    animation: glow 6s infinite ease-in-out;
+    text-shadow: 0 0 20px rgba(241, 196, 15, 1), 
+                 0 0 40px rgba(241, 196, 15, 0.8),
+                 0 0 60px rgba(241, 196, 15, 0.6);
+  }
+
+  @keyframes glow {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1) translateY(-10px);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.2) translateY(0);
+    }
+  }
+  
+  .number:nth-child(1) { top: 5%; left: 10%; }   /* Top-left */
+  .number:nth-child(2) { top: 10%; left: 80%; }  /* Top-right */
+  .number:nth-child(3) { top: 85%; left: 15%; }  /* Bottom-left */
+  .number:nth-child(4) { top: 75%; left: 85%; }  /* Bottom-right */
+  .number:nth-child(5) { top: 20%; left: 30%; }  /* Near top-center-left */
+  .number:nth-child(6) { top: 25%; left: 65%; }  /* Near top-center-right */
+  .number:nth-child(7) { top: 60%; left: 25%; }  /* Near bottom-center-left */
+  .number:nth-child(8) { top: 65%; left: 70%; }  /* Near bottom-center-right */
+  .number:nth-child(9) { top: 40%; left: 15%; }  /* Mid-left */
+  .number:nth-child(10){ top: 45%; left: 85%; }  /* Mid-right */
+  
+  
+
