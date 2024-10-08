@@ -122,3 +122,60 @@
     background-color: #e67e22;
     color: black;
   }
+
+  #grid-container {
+    display: grid;
+    gap: 5px; /* Reduces space between grid items */
+    justify-items: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    margin: 20px auto; /* Centers the grid on the page */
+    max-width: 80%; /* Limits the width of the grid container */
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
+}
+
+.cell {
+    background-color: rgba(241, 196, 15, 1);
+    border: 2px solid rgba(241, 196, 15, 1);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;  /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    box-sizing: border-box; /* Ensures border and padding are included in the element's size */
+    padding: 0; /* Removes any extra padding that could affect the size */
+}
+
+
+#timer-display {
+  font-family: 'Arial', sans-serif;  /* Font style */
+  font-size: 40px;                   /* Font size */
+  color: #ffffff;                    /* Text color */
+  padding: 10px 20px;                /* Padding around the text */
+  text-align: center;                 /* Center the text */
+  margin: 20px 0;                    /* Margin for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.numbers-display {
+  display: flex; /* Use flexbox to layout the numbers in a row */
+  flex-wrap: wrap; /* Allow the items to wrap to the next line if they overflow */
+  justify-content: center; /* Center the numbers in the container */
+  margin: 20px 0; /* Margin for spacing */
+}
+
+.number-box {
+  background-color: rgba(241, 196, 15, 1); /* Same background color as cells */
+  border: 2px solid rgba(241, 196, 15, 1); /* Same border as cells */
+  text-align: center; /* Center the text inside the box */
+  font-size: 18px; /* Smaller font size than grid cells */
+  font-weight: bold; /* Bold text */
+  width: 40px; /* Width of each number box */
+  height: 40px; /* Height of each number box */
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 5px; /* Margin between number boxes */
+}
