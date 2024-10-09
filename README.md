@@ -1,11 +1,11 @@
 # Grid of Numbers Memory Game
 
-#### Welcome to Numbers Grid Memory Game!
+### Welcome to Numbers Grid Memory Game!
 
-##### Objective:
+### Objective:
  Remember the numbers in the grid and recall them in the correct order.
 
-#####  How to Play:
+###  How to Play:
 
 1. **Select Your Game Settings:**
 Choose a game level
