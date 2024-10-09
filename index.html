@@ -30,7 +30,8 @@
         
         <button class="play-button">PLAY</button>
         <button id="game-settings-btn" class="settings-button">Settings</button>
-
+        <button id="game-instructions-btn" class="settings-button" style="margin-top: 20px;">Game Instructions</button>
+        
         <section id="game-settings" style="display: none;">
             <h1>Game Settings</h1>
             <div class="settings-container">
@@ -49,11 +50,7 @@
                     </div>
                 </div>
                 <div class="settings-right">
-                    <h2>Countdown</h2>
-                    <div id="countdown">
-                        <button class="countdown-btn" data-countdown="on">ON</button>
-                        <button class="countdown-btn" data-countdown="off">OFF</button>
-                    </div>
+                   
                     <h2>Timer</h2>
                     <div id="timer">
                         <button class="timer-btn" data-timer="5">00:05</button>
@@ -69,7 +66,21 @@
                 <button id="cancel-settings" class="cancel-button">Cancel</button>
             </div>
         </section>
-        
+
+        <section id="game-instructions" style="display: none;">
+            <h1>Game Instructions</h1>
+            <p>Objective: Remember the numbers in the grid and recall them in the correct order.</p>
+            <p>How to Play:</p>
+            <ul>
+                <li>Select a level from the settings menu.</li>
+                <li>Choose a timer duration from the settings menu.</li>
+                <li>Click the "Play" button to start the game.</li>
+                <li>Memorize the grid of numbers for the duration of the timer.</li>
+                <li>When the timer expires, try to recall the numbers in the correct order by dragging and dropping them into the grid.</li>
+                <li>Click the "Check Answer" button to see how well you did.</li>
+            </ul>
+        </section>
+
         <!-- Game Area -->
             <section id="game-area" style="display: none;">
                 <div id="timer-display"></div>
@@ -92,8 +103,7 @@
                 <div id="button-container" style="text-align: center;">
                     <button id="play-again" style="display: none;">Play Again</button>
                 </div>
-                
-
+            
             </section>
 
       

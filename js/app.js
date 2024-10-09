@@ -44,13 +44,58 @@ function hideGameSettings() {
 }
 
 function saveGameSettings() {
+    // Store the selected level and other settings
+    selectedLevel = selectedLevel; // Already stored in step 1
+    selectedTimer = parseInt(document.querySelector('.timer-btn.selected').getAttribute('data-timer')); // Store the selected timer
+
+    // Hide the settings section
     settingsSection.style.display = 'none';
     playButton.style.display = 'block';
     settingsButton.style.display = 'block';
 }
-
 function startGame() {
-    // Randomly select a level
+        // Check if a level is selected
+        if (selectedLevel) {
+            // Get the number of rows and columns for the selected level
+            const { rows, cols } = LEVEL_CONFIGS[selectedLevel];
+            selectedRows = rows; // Store selected rows
+            selectedCols = cols; // Store selected columns
+    
+            // Generate a random grid of numbers
+            randomGrid = [];
+            for (let i = 0; i < rows; i++) {
+                randomGrid[i] = [];
+                for (let j = 0; j < cols; j++) {
+                    randomGrid[i][j] = Math.floor(Math.random() * 21); // Generate a random number between 0 and 20
+                }
+            }
+    
+            // Display the grid
+            gridContainer.innerHTML = '';
+    
+            // Set the grid layout dynamically
+            gridContainer.style.display = 'grid';
+            gridContainer.style.gridTemplateColumns = `repeat(${cols}, 1fr)`; // Create as many columns as required
+            gridContainer.style.gridTemplateRows = `repeat(${rows}, 1fr)`; // Create as many rows as required
+    
+            // Create and append grid cells
+            for (let i = 0; i < rows; i++) {
+                for (let j = 0; j < cols; j++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.textContent = randomGrid[i][j];
+                    gridContainer.appendChild(cell);
+                }
+            }
+    
+            gameArea.style.display = 'block';
+            userInput.style.display = 'none'; 
+            playButton.style.display = 'none';
+            settingsButton.style.display = 'none';
+    
+            startCountdown(selectedTimer); // Start the countdown timer
+    } 
+    else{  // Randomly select a level
     const levels = Object.keys(LEVEL_CONFIGS);
     selectedLevel = levels[Math.floor(Math.random() * levels.length)];
 
@@ -92,6 +137,8 @@ function startGame() {
     settingsButton.style.display = 'none';
 
     startCountdown(selectedTimer); // Start the countdown timer
+    }
+  
 }
 
 function startCountdown(duration) {
@@ -211,7 +258,6 @@ function checkAnswer(gridCells) {
         RestartGame(); 
     });
 }
-
 function RestartGame() {
     // Clear the grid container
     gridContainer.innerHTML = '';
@@ -236,18 +282,19 @@ function RestartGame() {
     PlayAgainButton.style.display = 'none';
 
     // Reset game state variables
-    selectedLevel = '';
     selectedRows = 0;
     selectedCols = 0;
     randomGrid = [];
     clearInterval(countdown); // Clear the timer if it's running
+
+    // Keep the selected level
+    // Do not reset selectedLevel variable
 
     // Optionally restart the game or show the play button again
     playButton.style.display = 'block';
     settingsButton.style.display = 'block';
     gameArea.style.display = 'none'; // Hide the game area until a new game starts
 }
-
 
 /*---------------- Event Listeners ----------------*/
 document.getElementById('game-settings-btn').addEventListener('click', showGameSettings);
@@ -256,5 +303,45 @@ document.getElementById('save-settings').addEventListener('click', saveGameSetti
 document.querySelector('.play-button').addEventListener('click', startGame);
 
 
+document.querySelectorAll('.level-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove the styles from all level buttons
+        document.querySelectorAll('.level-btn').forEach(btn => {
+            btn.style.background = 'transparent';
+            btn.style.color = 'rgba(241, 196, 15, 1.0)';
+        });
+
+        // Add the styles to the clicked button
+        button.style.background = 'rgba(241, 196, 15, 1.0)';
+        button.style.color = 'black';
+
+        selectedLevel = button.getAttribute('data-level');
+    });
+});
 
 
+document.querySelectorAll('.timer-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove the styles from all timer buttons
+        document.querySelectorAll('.timer-btn').forEach(btn => {
+            btn.style.background = 'transparent';
+            btn.style.color = 'rgba(241, 196, 15, 1.0)';
+            btn.classList.remove('selected');
+        });
+
+        // Add the styles to the clicked button
+        button.style.background = 'rgba(241, 196, 15, 1.0)';
+        button.style.color = 'black';
+        button.classList.add('selected');
+    });
+});
+
+
+document.getElementById('game-instructions-btn').addEventListener('click', () => {
+    const instructionsSection = document.getElementById('game-instructions');
+    if (instructionsSection.style.display === 'none') {
+        instructionsSection.style.display = 'block';
+    } else {
+        instructionsSection.style.display = 'none';
+    }
+});
