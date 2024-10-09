@@ -186,3 +186,18 @@
   text-align: center;
 }
 
+.play-again-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.play-again-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+

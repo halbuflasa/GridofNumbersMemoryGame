@@ -202,10 +202,14 @@ function checkAnswer(gridCells) {
         messageContainer.textContent = 'Some numbers were incorrect. Try again!';
         messageContainer.style.color = 'red'; // Change text color to red
     }
+    
 }
+
 
 /*---------------- Event Listeners ----------------*/
 document.getElementById('game-settings-btn').addEventListener('click', showGameSettings);
 document.getElementById('cancel-settings').addEventListener('click', hideGameSettings);
 document.getElementById('save-settings').addEventListener('click', saveGameSettings);
 document.querySelector('.play-button').addEventListener('click', startGame);
+
+
