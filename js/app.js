@@ -27,6 +27,7 @@ const saveMessage = document.getElementById('save-message');
 const gridContainer = document.getElementById('grid-container');
 const gameArea = document.getElementById('game-area');
 const userInput = document.getElementById('user-input');
+const PlayAgainButton = document.getElementById('play-again');
 
 /*-------------- Functions Section -------------*/
 
@@ -165,9 +166,12 @@ function onTimerExpired() {
     const checkAnswerButton = document.createElement('button');
     checkAnswerButton.id = 'check-answer-btn'; // Set an ID for styling and reference
     checkAnswerButton.textContent = 'Check Answer'; // Set the button text
-
+    checkAnswerButton.style.display = "none"; // Initially hidden
     // Add the button after the grid
-    gridContainer.parentNode.appendChild(checkAnswerButton);
+    document.getElementById("button-container").appendChild(checkAnswerButton);
+
+   
+    checkAnswerButton.style.display = "block";
 
     // Set up the event listener for the "Check Answer" button
     checkAnswerButton.addEventListener('click', () => {
@@ -202,7 +206,46 @@ function checkAnswer(gridCells) {
         messageContainer.textContent = 'Some numbers were incorrect. Try again!';
         messageContainer.style.color = 'red'; // Change text color to red
     }
-    
+    PlayAgainButton.style.display= 'Block';
+    PlayAgainButton.addEventListener('click',  () => {
+        RestartGame(); 
+    });
+}
+
+function RestartGame() {
+    // Clear the grid container
+    gridContainer.innerHTML = '';
+
+    // Clear the numbers display (if any)
+    const numbersDisplay = document.querySelector('.numbers-display');
+    if (numbersDisplay) {
+        numbersDisplay.remove();
+    }
+
+    // Clear the check answer button
+    const checkAnswerButton = document.getElementById('check-answer-btn');
+    if (checkAnswerButton) {
+        checkAnswerButton.remove();
+    }
+
+    // Clear feedback messages
+    const messageContainer = document.getElementById('message-container');
+    messageContainer.textContent = '';
+
+    // Hide the "Play Again" button
+    PlayAgainButton.style.display = 'none';
+
+    // Reset game state variables
+    selectedLevel = '';
+    selectedRows = 0;
+    selectedCols = 0;
+    randomGrid = [];
+    clearInterval(countdown); // Clear the timer if it's running
+
+    // Optionally restart the game or show the play button again
+    playButton.style.display = 'block';
+    settingsButton.style.display = 'block';
+    gameArea.style.display = 'none'; // Hide the game area until a new game starts
 }
 
 
@@ -211,5 +254,7 @@ document.getElementById('game-settings-btn').addEventListener('click', showGameS
 document.getElementById('cancel-settings').addEventListener('click', hideGameSettings);
 document.getElementById('save-settings').addEventListener('click', saveGameSettings);
 document.querySelector('.play-button').addEventListener('click', startGame);
+
+
 
 

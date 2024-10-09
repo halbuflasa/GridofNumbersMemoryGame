@@ -108,7 +108,7 @@
     margin-top: 20px;
   }
   
-  .save-button, .cancel-button {
+  .save-button, .cancel-button{
     background-color: #f39c12;
     color: white;
     padding: 10px 30px;
@@ -186,18 +186,27 @@
   text-align: center;
 }
 
-.play-again-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4CAF50; /* Green */
-  color: white;
-  border: none;
-  border-radius: 5px;
+#button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers buttons horizontally */
+  justify-content: center; /* Centers buttons vertically */
+  margin-top: 20px; /* Adjust top margin as needed */
+}
+
+#button-container button {
+  width: 150px; /* Set consistent width */
+  padding: 10px;
+  margin: 10px 0; /* Vertical space between buttons */
+  font-size: 16px; /* Adjust font size */
+  background-color: black;
+  color: yellow;
+  border: 2px solid yellow;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-.play-again-button:hover {
-  background-color: #45a049; /* Darker green on hover */
+#button-container button:hover {
+  background-color: yellow;
+  color: black;
 }
-
-
