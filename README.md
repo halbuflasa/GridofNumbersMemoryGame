@@ -1,12 +1,12 @@
 # Grid of Numbers Memory Game
 
 ### Welcome to Numbers Grid Memory Game!
-![Game Image](images/Screenshot 2024-10-13 184927.png)
 
 ### Objective:
  Remember the numbers in the grid and recall them in the correct order.
 
 ###  How to Play:
+![Game Image](images/Screenshot 2024-10-13 184927.png)
 
 1. **Select Your Game Settings:**
 Choose a game level
@@ -32,4 +32,5 @@ You will receive a clear message indicating whether you won or lost the game
 6. **Play Again:**
 You can start a new round and re-select your game settings to improve your performance
 
+https://halbuflasa.github.io/GridofNumbersMemoryGame/
 Good Luck and Have Fun!
