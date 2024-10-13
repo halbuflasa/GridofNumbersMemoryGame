@@ -11,7 +11,7 @@ const LEVEL_CONFIGS = {
     '5x4': { rows: 5, cols: 4 }
 };
 
-/*---------- Variables (state) ---------*/
+/*---------- Variables (state) -----------------------------------------------------------------------------------*/
 let selectedLevel = ''; // Stores the selected game level (grid size)
 let selectedCols = 0;   // Store the number of columns
 let selectedRows = 0;   // Store the number of rows
@@ -19,7 +19,7 @@ let selectedTimer = 5;  // Default timer value
 let randomGrid = [];    // Stores the randomly generated grid of numbers
 let countdown;         
 
-/*----- Cached Element References  -----*/
+/*----- Cached Element References  --------------------------------------------------------------------------------*/
 const playButton = document.querySelector('.play-button');
 const settingsButton = document.getElementById('game-settings-btn');
 const settingsSection = document.getElementById('game-settings');
@@ -29,7 +29,7 @@ const gameArea = document.getElementById('game-area');
 const userInput = document.getElementById('user-input');
 const PlayAgainButton = document.getElementById('play-again');
 
-/*-------------- Functions Section -------------*/
+/*-------------- Functions Section ------------------------------------------------------------------------------*/
 
 function showGameSettings() {
     settingsSection.style.display = 'block';
@@ -296,7 +296,7 @@ function RestartGame() {
     gameArea.style.display = 'none'; // Hide the game area until a new game starts
 }
 
-/*---------------- Event Listeners ----------------*/
+/*---------------- Event Listeners --------------------------------------------------------------------------------------------------*/
 document.getElementById('game-settings-btn').addEventListener('click', showGameSettings);
 document.getElementById('cancel-settings').addEventListener('click', hideGameSettings);
 document.getElementById('save-settings').addEventListener('click', saveGameSettings);
