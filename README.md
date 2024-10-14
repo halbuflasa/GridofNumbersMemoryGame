@@ -3,7 +3,7 @@
 
 ### Welcome to Numbers Grid Memory Game!
 ![Game landing page Image](images/GamelandingPage.png)
-https://halbuflasa.github.io/GridofNumbersMemoryGame/
+[Lets Play!](https://halbuflasa.github.io/GridofNumbersMemoryGame/)
 
 ### Objective:
  Remember the numbers in the grid and recall them in the correct order.
