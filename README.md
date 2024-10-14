@@ -14,6 +14,7 @@
 1. **Select Your Game Settings:**
 - Choose a game level
 - Adjust the timer options
+  
 ![Settings Image](images/Settings.png)
 
 2. **Start the Game:**
