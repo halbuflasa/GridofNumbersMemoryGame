@@ -6,12 +6,12 @@
  Remember the numbers in the grid and recall them in the correct order.
 
 ###  How to Play:
-![Game Image](images/Screenshot 2024-10-13 184927.png)
+
 
 1. **Select Your Game Settings:**
 Choose a game level
 Adjust the timer options
-![Settings Image](images/Screenshot 2024-10-13 185009.png)
+![Settings Image](images/Settings.png)
 
 2. **Start the Game:**
 Click the "PLAY" button to begin the game
