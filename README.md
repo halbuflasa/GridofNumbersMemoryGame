@@ -1,6 +1,7 @@
 # Grid of Numbers Memory Game
 
 ### Welcome to Numbers Grid Memory Game!
+![Game landing page Image](images/GamelandingPage.png)
 
 ### Objective:
  Remember the numbers in the grid and recall them in the correct order.
@@ -19,10 +20,12 @@ Click the "PLAY" button to begin the game
 3. **Memorization Phase:**
 Study the grid of numbers displayed in the correct order
 You have a limited time to memorize the grid, as indicated by the countdown timer
+![Memorization Phase Image](images/GameTimer.png)
 
 4. **Recall Phase:**
 When the timer expires, try to recall the numbers in the correct order by dragging numbers from a list (0-20)
 Fill in the empty grid with the numbers you remember
+![Recall Phase Image](images/Game.png)
 
 5. **Check Your Answer:**
 Click the "Check My Answer" button to see how well you did
