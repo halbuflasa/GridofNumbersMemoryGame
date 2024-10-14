@@ -10,8 +10,8 @@
 
 
 1. **Select Your Game Settings:**
-Choose a game level
-Adjust the timer options
+- Choose a game level
+- Adjust the timer options
 ![Settings Image](images/Settings.png)
 
 2. **Start the Game:**
@@ -37,3 +37,16 @@ You can start a new round and re-select your game settings to improve your perfo
 
 https://halbuflasa.github.io/GridofNumbersMemoryGame/
 Good Luck and Have Fun!
+
+### Attribution:
+- I referred to this [Drag and Drop CSS Tricks guide](https://css-tricks.com/creating-a-parking-game-with-the-html-drag-and-drop-api/) when implementing the drag-and-drop functionality.
+- The background numbers effect is based on the [CSS Transform guide](https://css-tricks.com/almanac/properties/t/transform/).
+
+### Technologies Used:
+- HTML
+- CSS
+- JavaScript
+
+### Future Enhancements:
+I plan to add additional features to the game, such as support for touch screens.
+
